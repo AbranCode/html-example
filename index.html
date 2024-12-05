@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning Html</title>
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="">
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+      margin: 0;
+    }
+
+
+    div {
+      max-width: 600px;
+      max-height: auto;
+      box-shadow: 0.1px 0.1px 10px 3px rgb(80, 70, 70);
+      background-color: rgb(219, 219, 217);
+      padding: 10px;
+      border: 1px solid transparent;
+      margin: 20px 10px;
+
+    }
+
+    #index a{
+      display: block;
+      text-decoration: none;
+    }
+
+    h2 {
+      color: rgb(206, 15, 15);
+    }
+
+    #form-text h3{
+      margin-top: 0px;
+    }
+
+    .with-style{
+      border: 1px solid black;
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .with-style caption {
+      border: 1px solid black;
+      border-bottom: none;
+      font: normal bold 1em Arial, sans-serif;
+      background-color: rgb(170, 238, 238);
+    }
+
+    .with-style th, .with-style td {
+      border: 1px solid black;
+      text-align: center;
+      padding: 5px;
+    }
+
+    .with-style th {
+      background-color: rgb(106, 228, 106);
+    }
+
+    .with-style td {
+      background-color: rgb(179, 231, 179);
+    } 
+
+    iframe {
+      width: 100%;
+      height: 500px;
+      border: 2px solid black;
+    }
+
+    form {
+      width: 300px;
+      border: 2px inset aqua;
+
+    }
+
+    form div {
+      all: unset;
+      width: 100%;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1.5rem;
+      padding: 15px 15px;
+    }
+
+    label, input {
+      margin: 12px ;
+    }
+
+    #btn {
+      margin-left: 130px;
+    }
+  </style>
+</head>
+<body>
+  <div id="index">
+    <ol>
+      <li><a href="#h-p">Headings and paragraphs</a></li>
+      <li><a href="#hr-br-pre">hr, br and pre</a></li>
+      <li><a href="#css">Css en html</a></li>
+      <li><a href="#form-text">Formatos de texto</a></li>
+      <li><a href="#img">Imágenes</a></li>
+      <li><a href="#link">Enlaces</a></li>
+      <li><a href="#fav">Favicon</a></li>
+      <li><a href="#tab">Tablas</a></li>
+      <li><a href="#lists">Listas</a></li>
+      <li><a href="#block-line">Elementos en bloque y en línea</a></li>
+      <li><a href="#ifrm">Mostrar una página web dentro de otro</a></li>
+      <li><a href="#js">JavaScript en html</a></li>
+      <li><a href="#form">Formularios</a></li>
+      <!-- <li><a href="#drag-drop">Arrastrar y soltar</a></li> -->
+    </ol>
+  </div>
+
+  <div id="h-p">
+  <h1 style="margin: 0;">Encabezado 1</h1>
+  <p>Este es un párrafo</p>
+
+  <h2 style="color: initial;">Encabezado 2</h2>
+  <p>Este es un párrafo</p>
+
+  <h3>Encabezado 3</h3>
+  <p>Este es un párrafo</p>
+
+  <h4>Encabezado 4</h4>
+  <p>Este es un párrafo</p>
+
+  <h5>Encabezado 5</h5>
+  <p>Este es un párrafo</p>
+
+  <h6>Encabezado 6</h6>
+  <p>Este es un párrafo</p>
+</div>
+
+<div id="hr-br-pre">
+  <h2 style="margin-bottom: 0;">Usando &lt;hr&gt;, &lt;br&gt; y &lt;pre&gt;</h2>
+  <hr style="margin-top: 0;">
+  <p>
+    Con &lt;hr&gt; se puede mostrar una barra vertical horizontal.<br><br>
+    Y con &lt;br&gt; se puede forzar un salto de linea. <br><br>
+
+    Es importante recalcar que las etiquetas &lt;hr&gt; y &lt;br&gt; son
+    etiquetas vacias, lo que quiere decir que son etiquetas que tienen
+    etiqueta final o de cierre.
+  </p>
+  <pre>
+En este párrafo estoy usando &lt;pre&gt; para      demostrar que en esta
+    etiqueta se conservan 
+    los saltos espacios, pero esta 
+    etiqueta tiene una fuente 
+    predeterminada de la familia 
+    <b>monospace</b>.
+  </pre>
+</div>
+
+<div id="css">
+  <h2>Agregando estilos con css</h2>
+  <p>Existen 3 formas de agregar estilos.</p>
+  <dl>
+    <dt><b>En linea</b></dt>
+    <dd>Usando la propiedad <strong>style</strong> en la etiqueta de 
+      inicio del elemento al que se le quiere dar el estilo.
+    </dd>
+    <dt><b>Interno</b></dt>
+    <dd>Dentro del documento html se puede dar estilos usando la etiqueta 
+      <strong>&lt;style&gt;</strong> dentro de la etiqueta 
+      <strong>&lt;head&gt;</strong>.
+    </dd>
+    <dt><b>Externo</b></dt>
+    <dd>Esta forma de aplicar estilos es mediante archivos locales o
+      ubicados en servidores privados con extesión <strong>.css</strong>, 
+      los cuales se hacen referencia en los documentos html mediante la 
+      etiqueta<strong>&lt;link&gt;</strong> estableciendo sus atributos 
+      <b>ref="stylesheet"</b> y <b>href="url"</b>.
+    </dd>
+  </dl>
+  <p>Usar cualquiera de las formas de dar estilo mencionadas depende del
+    proyectos, ya que en proyectos grandes no es buena práctica definir
+    los estilos en el mismo documento html, y para una mejor legibilidad seria
+    conveniente definir los estilos en un archivo externo y vincularlo al
+    documento html. En el caso donde el proyecto no sea muy grande podria ser 
+    conveniente definir internamente los estilos o por preferencia del
+    programador se podria dar etilos a ciertos elementos individualemente. 
+    En conclusión, el uso de cualquiera de las 3
+    formas de dar estilos depende del programdor y el proyecto. 
+  </p>
+</div>
+
+<div id="form-text">
+  <h2>Formatos de texto</h2>
+  <hr>
+  <h3>Texto en negrita</h3>
+  <b>Para poner un texto en negrita se utiliza la etiqueta &lt;b&gt;</b>
+  <hr>
+  <h3>Texto importante</h3>
+  <strong>Para indicar que un texto es importante se usa la etiqueta 
+    &lt;strong&gt;</strong>
+  <p>La diferencia entre &lt;b&gt; y &lt;strong&gt; es que la primera se usa
+    para colocar en negrita cualquier texto, mientras que la segunda se usa
+    para indicar que el texo es importante.
+  </p> 
+  <hr>
+  <h3>Texto en cursiva</h3>
+  <i>Para poner un texto en cursiva se usa la etiqueta &lt;i&gt;</i>
+  <hr>
+  <h3>Texto destacado</h3>
+  <em>Para mostrar un texto enfatizado se usa la etiqueta &lt;em&gt;</em>
+  <hr>
+  <h3>Texto resaltado</h3>
+  <mark>Para resaltar un texto se usa la etiqueta &lt;mark&gt;</mark>
+  <hr>
+  <h3>Texto eliminado</h3>
+  <del>Para mostrar un texto eliminado se usa la etiqueta &lt;del&gt;</del>
+  <hr>
+  <h3>Texto insertado</h3>
+  <ins>Para mostrar un texto insertado se usa la etiqueta &lt;ins&gt;</ins>
+  <hr>
+  <h3>Texto pequeño</h3>
+  <small>Para hacer que un texto sea pequeño se usa la etiqueta 
+    &lt;small&gt;</small>
+  <hr>
+  <h3>Texto superíndice</h3>
+  <p>Para hacer que un texto sea superindice se usa la 
+    etiqueta &lt;sup&gt; <br>
+    <b>Por ejemplo:</b><br>
+    2<sup>3</sup> = 8</p>
+  <hr>
+  <h3>Texto subíndice</h3>
+  <p>Para hacer que un texto sea subindice se usa la 
+    etiqueta &lt;sub&gt; <br>
+    <b>Por ejemplo:</b><br>
+    H<sub>2</sub>O</p>
+</div>
+
+<div id="img">
+  <h2>Imágenes</h2>
+  <p>Con la etiqueta vacía <b>&lt;img&gt;</b> se puede incrustar una imagen
+  en un documento html. El atributo principal para usar esta etiqueta es
+  <strong>src="URL"</strong>, ademas es recomendado que se use el atributo
+  <b>alt="image description"</b>.</p>
+
+  <p><b style="color: green;">Ejemplo:</b><br><br>
+  <img src="img/img-example.png" alt="Logo html" 
+    style="width: 64px; height: 64px;">
+  </p>
+</div>
+
+<div id="link">
+  <h2>Links/Enlaces/Hipervínculos</h2>
+  <p>
+    Los enlaces permiten ir de un documento a otros al hacer click sobre ellos,
+    un enlace puede ser texto o imagen. Para indicar que un texto o
+    imagen es un enlace se debe de usar la etiqueta &lt;a&gt;
+  </p>
+  
+  <p>Hay que mencionar que el atributo mas importante para la etiqueta
+    &lt;a&gt; es <strong>href="URL"</strong> y opcionalmente pero recomendado 
+    se puede colocar el atributo <b>title</b> cuyo valor debe de ser una 
+    descripción de a donde lleva el link al pasar el puntero del mouse por
+    el enlace.
+  </p>
+
+  <em>De forma predeterminada un enlace no visitado se muestra de color azul,
+    un enlace visitado se muestra de color morado y un enlace activo se muestra
+    de color rojo. Además es posible especificar si la página solicitada se
+    abrirá en la pestaña o ventana actual, otra pestaña o ventana y otras
+    opciones adicionales con el atributo <b>target="_self"</b> (el valor 
+    predeterminado es _self que indica abrir en la pestaña o ventana actual).
+  </em><br><br>
+  
+  <div style="all: initial;"> <!--style="position: fixed; top: 0; right: 0; margin: 0;"-->
+    <a href="#index" title="Ver índice">
+    Texto como link (ir al índice)
+  </a></div>
+
+  <p><b style="color: green;">Imagen como link:</b><br><br>
+    <a href="#index" title="Ver índice">
+    <img src="./img/link-example.png" alt="">
+  </a></p>
+</div>
+
+<div id="fav">
+  <h2>Favicon</h2>
+  <p>Los favicons son los iconos que se muestran en las pestañas de los
+    navegadores junto al título, normalmente su tamaño es de 16x16 pixeles. 
+    La sintaxis es la siguiente: <br>
+    <strong><b>&lt;link rel="shortcut icon" href="favicon.ico" 
+      type="image/x-icon"&gt;</b></strong><br><br>
+    la etiqueta &lt;link&gt; para el favicon debe de estar dentro de la etiqueta
+    <b>&lt;head&gt;</b>
+  </p>
+</div>
+
+<div id="tab">
+  <h2>Tablas</h2>
+  <p>En html existen etiquetas especiales que permiten crear tablas y son las 
+    siguientes:
+  </p>
+  <dl>
+    <dt>&lt;table&gt;</dt>
+    <dd>Es la etiqueta contenedora para la tabla</dd>
+    <dt>&lt;th&gt;</dt>
+    <dd>Etiqueta usado para el encabezado de la tabla</dd>
+    <dt>&lt;tr&gt;</dt>
+    <dd>Esta etiqueta se usa para definir las filas de las tablas</dd>
+    <dt>&lt;td&gt;</dt>
+    <dd>Define el campo de una tabla, es decir la interseccion de una fila y 
+      una columna
+    </dd>
+    <dt>&lt;caption&gt;</dt>
+    <dd>Esta etiqueta se usa para definir el título de una tabla</dd>
+  </dl>
+
+  <table>
+    <caption>Ejemplo de tabla sin css</caption>
+    <tr>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>País</th>
+    </tr>
+    <tr>
+      <td>Adam</td>
+      <td>Smith</td>
+      <td>Estados Unidos</td>
+    </tr>
+    <tr>
+      <td>Miguel</td>
+      <td>Garu</td>
+      <td>Perú</td>
+    </tr>
+  </table>
+
+  <table class="with-style">
+    <caption>Ejemplo de tabla con css</caption>
+    <tr>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>País</th>
+    </tr>
+    <tr>
+      <td>Adam</td>
+      <td>Smith</td>
+      <td>Estados Unidos</td>
+    </tr>
+    <tr>
+      <td>Miguel</td>
+      <td>Garu</td>
+      <td>Perú</td>
+    </tr>
+  </table>
+  <p><strong>Nota:</strong> Las etiquetas mencionadas en esta seccion de tablas
+    solo son semanticas, ya que para hacerlas visulamente atractivas es necesario
+    aplicarles estilos.
+</p>
+</div>
+
+<div id="lists">
+<h2>Listas</h2>
+<p>En el desarrollo de páginas web las listas son muy usadas, en html existen 
+  3 etiquetas para definir listas y una etiqueta <b>&lt;li&gt;</b> que permite
+  definir el elemento de las listas.
+</p>
+
+<h3>Listas desordenadas (&lt;ul&gt;)</h3>
+<p>Se utilizan para presentar una lista de elementos encabezados 
+  por una viñeta en forma bolita, un cuadrado o otras formas. Por ejemplo:</p>
+<ul>
+  <li>Elemento</li>
+  <li style="list-style-type: square;">Elemento</li>
+  <li style="list-style-type: circle;">Elemento</li>
+</ul>
+
+<h3>Listas ordenadas (&lt;ol&gt;)</h3>
+<p>Se utilizan para presentar una lista de elementos numerados, ordenados de 
+  forma secuencial o por importancia. Por ejemplo:</p>
+<ol>
+  <li>Elemento</li>
+  <li>Elemento</li>
+  <li>Elemento</li>
+</ol>
+
+<h3>Listas de descripciones (&lt;dl&gt;)</h3>
+<p>Se utilizan para presentar una lista de elementos, los cuales tienen una
+  descripción. En este  tipo de lista se usa la etiqueta <b>&lt;dt&gt;</b>
+  para definir los elementos y se debe de usar la etiqueta <b>&lt;dd&gt;</b>
+  para definir la descripción del elemento de lista de descripción. 
+  Por ejemplo:</p>
+<dl>
+  <dt>Elemento</dt>
+  <dd>Descripción</dd>
+  <dt>Elemento</dt>
+  <dd>Descripción</dd>
+  <dt>Elemento</dt>
+  <dd>Descripción</dd>
+</dl>
+</div>
+
+<div id="block-line">
+  <h2>Elementos en bloque y en línea</h2>
+  <p>Cada elemento html tiene una forma de visualización predeterminada, los dos
+    valores de visualización más comunes son <b>bloque</b> y <b>línea</b>.
+  </p>
+  <h3>Elementos en bloque</h3>
+  <p>
+    Los elementos con valor de visualización en bloque siempre comienzan con
+    una nueva línea y los navegadores agregan un margen predeterminado antes y
+    después del elemento. Un elemento a nivel de bloque siempre ocupa todo el 
+    ancho disponible (se extiende hacia la izquierda y la derecha tanto como 
+    puede). Dos ejemplos de este tipo de visualización son los
+    elementos <b>&lt;p&gt;</b> y <b>&lt;div&gt;</b>.
+  </p><div style="margin: auto; box-shadow: none; border: 2px solid rgb(9, 248, 89); display: block;">
+    Ejemplo de elemento en bloque
+  </div>
+
+  <h3>Elementos en línea</h3>
+  <p>Los elementos en línea son lo opuesto a los elementos en bloque y solo 
+    ocupan el ancho necesario. Además los elementos en línea no pueden contener
+    elementos a nivel de bloque. Un ejemplo de este tipo de visualización es el
+    elemento <b>&lt;span&gt;</b>.
+  </p><span style="border: 2px solid rgb(9, 248, 89);">Ejemplo de elemento en línea</span>
+  <p><a href="https://www.w3schools.com/html/html_blocks.asp">
+    Ver en w3schools</a></p>
+  <p><strong>Nota:</strong> Usando la propiedad css <b>display</b> es posible
+    cambiar los tipos de visualización predefinidos de los elementos html.
+  </p>
+</div>
+
+<div id="ifrm">
+  <h2>Mostrar una página web dentro de otro</h2>
+  <p>Para lograr mostrar una página web dentro de otro se usa la etiqueta
+    <b>&lt;iframes&gt;</b>.
+  </p>
+
+  <iframe src="" name="iframe-demo" title="MDN Web Docs" frameborder="0"></iframe>
+  <p><a href="http://127.0.0.1:5500/index.html" target="iframe-demo">Abrir esta página en el iframe</a></p>
+</div>
+
+<div id="js">
+  <h2>JavaScript en html</h2>
+  <p>Con JavaScript las páginas web se vuelven dinámicas e interactiva. Existen
+    2 formas de usar este lenguaje en un documento html y son:
+  </p>
+  <dl>
+    <dt><b>Interno</b></dt>
+    <dd>Usando la etiqueta <b>&lt;script&gt;</b> es posible escribir código
+    JavaScript dentro de un documento html.</dd>
+    <dt><b>Externo</b></dt>
+    <dd>Es posible escribir código JavaScript en un archivo externo con extesión 
+      <strong>.js</strong> y referenciarlo dentro del documento html usando la
+      siguiente sintaxis: <br>
+      <b>&lt;script src="url"&gt;&lt;/script&gt;</b>
+    </dd>
+  </dl>
+    <p id="msg" style="color: rgb(14, 75, 75);">
+      Mensaje: Presiona el botón para cambiar el mensaje.
+    </p>
+    <button onclick="setMessage()" style="font-size: large; padding: 5px 2rem;">Click</button>
+    <em style="display: block; margin-top: 15px;"><strong>Nota:</strong> En los navegadores que no tiene soporte habilitado
+    para JavaScript o su navegador no admite JavaScript, el codigo de dicho
+    lenguaje no funcionará. Para este contexto se debe de usar la etiqueta
+    <strong>&lt;noscript&gt;</strong> para inidicarle al usuario que su 
+    navegador no soporta JavaScript.
+    </em>
+</div>
+
+<div id="form">
+  <h2>Formularios</h2>
+  <p>La principal función  de los formularios es recolectar datos de los 
+    usuarios</p>
+  <form>
+    <div>Ejemplo de Formulario</div><br>
+    <label for="fname">First name</label>
+    <input type="text" id="fname" class="one"><br>
+    <label for="lname">Last name</label>
+    <input type="text" id="lname" class="two"><br>
+    <input type="button" id="btn" value="Click" onclick="setInputs()">
+  </form>
+</div>
+
+<script>
+  function setMessage() {
+    const para = document.getElementById("msg");
+    para.innerHTML = "Mensaje: Cambiaste mi contenido y color usando JavaScript";
+    para.style.color = "green";
+  }
+</script>
+</body>
+</html>
